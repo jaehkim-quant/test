@@ -18,7 +18,7 @@ const LINK_KEYS: Array<{ key: keyof Profile["links"]; labelKey: "labelResearch" 
 ];
 
 /** Links that are live; the rest are shown as "Coming soon" */
-const READY_LINK_KEYS: Set<keyof Profile["links"]> = new Set(["research", "linkedin"]);
+const READY_LINK_KEYS: Set<keyof Profile["links"]> = new Set(["research", "x", "linkedin"]);
 
 export function ProfileCard({ profile }: { profile: Profile }) {
   const { locale } = useLocale();

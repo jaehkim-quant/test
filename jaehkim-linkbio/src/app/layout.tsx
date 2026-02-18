@@ -14,9 +14,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 절대 URL이어야 카카오톡 등에서 OG 이미지를 제대로 가져옵니다.
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ??
+  (process.env.VERCEL_URL != null ? `https://${process.env.VERCEL_URL}` : undefined);
+
 export const metadata: Metadata = {
+  metadataBase: baseUrl ? new URL(baseUrl) : undefined,
   title: "Link-in-Bio",
   description: "Share your links in one place",
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "JaehKim Link-in-Bio",
+    description: "Share your links in one place",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JaehKim Link-in-Bio",
+    description: "Share your links in one place",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

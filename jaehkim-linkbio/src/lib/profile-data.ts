@@ -23,7 +23,7 @@ const profiles: Profile[] = [
       research: "https://jaehkim-research.vercel.app/",
       openKakao: "https://open.kakao.com/o/xxxx",
       youtubeChannel: "https://www.youtube.com/@xxxx",
-      x: "https://x.com/@xxxx",
+      x: "https://x.com/jaehkimresearch",
       linkedin: "https://www.linkedin.com/in/jaehoon-kim-93017b140",
     },
   },
